@@ -2,39 +2,36 @@ $(document).ready(function () {
   let $menuHome = $('#menu-home-container');
   const $projectImg = $('.project-img').find('img');
 
+  // Tech skills
   const arrIconsTech = [
-    { tool : 'jquery' , description : 'Librería de Javascript'},
-    { tool : 'firebase' , description : 'Plataforma para el uso de webs y Apps'},
-    { tool : 'javascript' , description : 'Lenguajes de Programación'},
-    { tool : 'node js' , description : 'Gestor de paquetes NPM'},
-    { tool : 'git' , description : 'Software de control de versiones'},
-    { tool : 'react' , description : 'Librería Javascript'},
-    { tool : 'redux' , description : 'Librería Javascript'},
-    { tool : 'sass' , description : 'Preprocesador CSS'},
-    { tool : 'gulp' , description : 'Automatizador de tareas'},
-    { tool : 'webpack' , description : 'Empaquetador de módulos y archivos'},
-    { tool : 'photoshop' , description : 'Programa para editar imágenes'},
-    { tool : 'svg' , description : 'formato de gráficos vectoriales 2D de HTML5'},
-    { tool : 'android' , description : ''}
+    { tool : 'javascript' , description : 'Coding lenguaje'},
+    { tool : 'Python' , description : 'Coding lenguaje'},
+    { tool : 'C' , description : 'Coding lenguaje'},
+    { tool : 'HTML' , description : 'Markup language'},
+    { tool : 'CSS' , description : 'Style sheet language'},
+    { tool : 'flask' , description : 'Web Framework'},
+    { tool : 'git' , description : 'Version control software'},
+    { tool : 'sass' , description : 'CSS Processor'},
+    { tool : 'photoshop' , description : 'Image edition software'},
+    { tool : 'Illustrator' , description : 'Vector graphics editor'},
+    { tool : 'Experience Design' , description : 'User experience design tool'},
+
   ]
 
   $('.modal-info').hide();
 
-  // Creando un clon del menu justo alado del original
+  
+  // Clon of the menu next to it
   $('#menu-home-container').addClass('original').clone().insertAfter('#menu-home-container').addClass('cloned')
     .css('position', 'fixed').css('top', '0').css('margin-top', '-1px').css('z-index', '500').removeClass('original').hide();
-
-  scrollIntervalID = setInterval(stickIt, 10);
-
-  $('.original').find("a").css({
-    "color": "#fff"
-  });
+  
+  scrollIntervalID = setInterval(stickIt, 100);
 
   function stickIt() {
     var orgElementPos = $('.original').offset();
 
     orgElementTop = orgElementPos.top;
-    // console.log(orgElementTop)  //700         
+    // console.log(orgElementTop)  //700       
 
     if ($(window).scrollTop() >= (orgElementTop)) {
       // scrolled past the original position; now only show the cloned, sticky element.
@@ -54,18 +51,6 @@ $(document).ready(function () {
       $('.original').css('visibility', 'visible');
     }
   }
-  
-
-  let upWindow = function () {
-    // var el = document.getElementsByTagName('body');
-    var $el = ('body');
-    $el.scrollTop = 0;
-  }
-
-  let goToMenu = function () {
-    window.scrollTo(5, 0);
-  }
-
 // Adding icons
   arrIconsTech.map(index =>
     $('.tech-skills-box').append(
@@ -82,15 +67,12 @@ $(document).ready(function () {
     // console.log('callback - particles.js config loaded');
   });
 
-  // Evento para whastapp
+  // Whastapp
   $('#wpp').on('click', function(){
-    window.open("https://api.whatsapp.com/send?phone=51971313111&text=I'm%20interested%20in%20your%20portfolio");
+    window.open("https://api.whatsapp.com/send?phone=542616360234&text=I'm%20interested%20in%20your%20portfolio");
   })
 
-  // modal
-  $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').focus()
-  })
+
   console.log($('.modal-info'));
 
   // Images project
@@ -102,8 +84,6 @@ $(this).next().next().append(`
 
 `)
   }
-
-  // $projectImg.on('click', showInfo);
 
 
 });
