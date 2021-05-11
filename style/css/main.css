@@ -112,6 +112,20 @@ canvas {
       line-height: 0;
       text-align: center; }
 
+.footerbox {
+  background-color: #000;
+  position: relative;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  overflow:hidden;}
+.footerboxtext{
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+}
+
 /* ABOUT ME */
 #my-self {
   padding-bottom: 3em; }
@@ -380,6 +394,7 @@ canvas {
 .main {
   display: flex;
   align-items: center;
+=
 }
 .project-title {
   align-items: center;
@@ -499,6 +514,18 @@ footer {
   align-items: center; }
   footer p {
     text-align: center; }
+    
+/* modern clearfix */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+    line-height:0;
+}
+.cf:after {
+    clear:both;
+}    
+
 
 @media (min-width: 575px) {
   #my-skills .icon-tech-skill {

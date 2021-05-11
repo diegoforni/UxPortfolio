@@ -69,7 +69,7 @@ $(document).ready(function () {
 
   // Whastapp
   $('#wpp').on('click', function(){
-    window.open("https://api.whatsapp.com/send?phone=542616360234&text=I'm%20interested%20in%20your%20portfolio");
+    window.open("https://api.whatsapp.com/send?phone=542616360234&text=Hello!%20I%20am%20interested%20in%20your%20portfolio");
   })
 
 
